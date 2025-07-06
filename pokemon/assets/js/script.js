@@ -1,5 +1,6 @@
 // NAMPILIN GAMBAR POKEMON!
 const container = document.querySelector(`#container`);
+const title = document.querySelector(`h1 > b`);
 const baseImgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/`;
 
 // buat looping dari 1-500
@@ -18,21 +19,12 @@ for (let i = 1; i <= 500; i++) {
   pokeBall.appendChild(label); // menambahkan "label" ke dalam "div.pokeBall"
 
   // GAMBAR POKEMON INTERAKTIF!
-  imgPokemon.classList.add(`round`); // tambahin lingkaran + border transparan
+  imgPokemon.addEventListener(`click`, brightness); // tampilin karakter pokemon
+  title.addEventListener(`click`, brightness); // tampilin judul pokemon
 
-  const cekHasil = () => {
-    const allImg = document.querySelectorAll(`.pokemon img`); // ambil semua elemen "round"
-    const allClicked = Array.from(allImg).every((img) =>
-      img.classList.contains(`roundClick`)
-    ); // jika semua elemen "round" sudah di klik, tampilkan alert
-    if (allClicked)
-      alert(`ദ്ദി ( ᵔ ᗜ ᵔ ) SELAMAT!!\nKamu berhasil menangkap semua pokemon!`);
-  };
-
-  pokeBall.addEventListener(`click`, () => {
-    imgPokemon.classList.toggle(`roundClick`); // tambahin toggle lingkaran + border
-    cekHasil(); // cek hasil
-  });
+  function brightness() {
+    this.style.filter = `brightness(100%)`;
+  }
 }
 
 // hasil!
@@ -40,15 +32,6 @@ for (let i = 1; i <= 500; i++) {
 // <container>
 //    <div class="pokeBall">
 //       <img src="https://raw.github.../1.png" />
-//       <span>#1</span>
-//    </div> ...500x
-// <container>
-
-// + interaktif
-// --------------------
-// <container>
-//    <div class="pokeBall">
-//       <img src="https://raw.github.../1.png" class ="round roundClick"/>
 //       <span>#1</span>
 //    </div> ...500x
 // <container>
