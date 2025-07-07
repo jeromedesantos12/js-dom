@@ -34,13 +34,14 @@ h1 > b {
   display: inline-block;
   text-align: center;
   margin: 0 0.5em;
+  transition: all 0.4s ease-in;
+  border-radius: 5em;
 }
 
 .pokemon img {
   display: block;
   cursor: pointer;
   transition: all 0.4s ease;
-  cursor: pointer;
   filter: brightness(0%);
 }
 
@@ -50,8 +51,9 @@ h1 > b {
   border: 0.2em solid rgba(0, 0, 0, 0);
 }
 
-.pokemon img:hover {
+.pokemon:hover {
   background-color: #3b4cca;
+  border-radius: 5em;
 }
 
 .roundClick {
