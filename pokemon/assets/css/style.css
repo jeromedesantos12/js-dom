@@ -28,10 +28,6 @@ h1 {
 
 h1 > b {
   color: #ffde00;
-  filter: brightness(0%);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  filter: brightness(0%);
 }
 
 .pokemon {
@@ -44,5 +40,22 @@ h1 > b {
   display: block;
   cursor: pointer;
   transition: all 0.4s ease;
+  cursor: pointer;
   filter: brightness(0%);
+}
+
+.round {
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.2em solid rgba(0, 0, 0, 0);
+}
+
+.pokemon img:hover {
+  background-color: #3b4cca;
+}
+
+.roundClick {
+  border-radius: 100%;
+  background-color: #ffde00;
+  border: 0.2em solid #3b4cca;
 }
