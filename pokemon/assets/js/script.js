@@ -31,7 +31,6 @@ for (let i = 1; i <= 500; i++) {
   };
 
   pokeBall.addEventListener(`click`, () => {
-    imgPokemon.style.filter = `brightness(100%)`;
     imgPokemon.classList.toggle(`roundClick`); // tambahin toggle lingkaran + border
     cekHasil(); // cek hasil
   });
